@@ -20,7 +20,7 @@ export class CharactersPage implements OnInit {
     const id = this.routeActive.snapshot.paramMap.get('id');
     console.log(id);
     this.charService.getCharacter(id).subscribe(char => {
-      console.log(char)
+      // console.log(char)
       this.Character = char;
     })
   }

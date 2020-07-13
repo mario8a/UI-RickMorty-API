@@ -20,7 +20,7 @@ export class Tab1Page {
 
   getCharaters() {
     this.charService.getCharacters().subscribe(character => {
-      console.log(character);
+      // console.log(character);
       this.Characters = character;
     })
   }
