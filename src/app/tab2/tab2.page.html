@@ -1,28 +1,32 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
+<ion-header [translucent]="true" class="ion-no-border">
+  <div class="wave">
+    <h1>
       Episodes
-    </ion-title>
-  </ion-toolbar>
+    </h1>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#272942" fill-opacity="1" d="M0,288L80,266.7C160,245,320,203,480,202.7C640,203,800,245,960,240C1120,235,1280,181,1360,154.7L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+  </div>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
-  <ion-grid>
-    <ion-row>
-      <ion-col size="12" size-lg="4" *ngFor="let epi of Episodes.results">
-        <ion-card [routerLink]="['/episodes', epi.id]">
-          <ion-card-header>
-            <ion-card-subtitle>{{epi.air_date}}</ion-card-subtitle>
-            <ion-card-title>{{epi.name}}</ion-card-title>
-          </ion-card-header>
-        
-          <ion-card-content>
-            {{epi.episode}}
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <div class="wave-container">
+    
+    <ion-grid class="grid-cards">
+      <ion-row>
+        <ion-col size="12" size-lg="4" *ngFor="let epi of Episodes.results">
+          <ion-card [routerLink]="['/episodes', epi.id]">
+            <ion-card-header>
+              <ion-card-subtitle>{{epi.air_date}}</ion-card-subtitle>
+              <ion-card-title>{{epi.name}}</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content>
+              {{epi.episode}}
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 
 </ion-content>

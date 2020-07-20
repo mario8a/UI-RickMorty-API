@@ -14,6 +14,12 @@ export class Tab1Page {
     private charService: CharactersService
   ) {}
 
+  options = {
+    centeredSlices: true,
+    loop: true,
+    spaceBetween: -100,
+  };
+
   ngOnInit(): void {
     this.getCharaters()
   }

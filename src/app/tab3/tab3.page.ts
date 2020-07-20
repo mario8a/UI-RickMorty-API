@@ -18,6 +18,7 @@ export class Tab3Page {
 
   getLocations(){
     this.locService.getLocations().subscribe(location => {
+      // console.log(location)
       this.Locations = location;
     })
   }

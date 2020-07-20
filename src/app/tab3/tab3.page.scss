@@ -1,0 +1,16 @@
+.grid-cards {
+    position: relative;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.wave > svg {
+    display: block;
+    height: 100px;
+}
+
+.wave > h1 {
+    position: absolute;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    padding: 5px;
+}
