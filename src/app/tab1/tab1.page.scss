@@ -2,20 +2,33 @@ ion-toolbar {
     --background: rgba(0,0,0,0);
 }
 
+.logotipo img{
+  margin: 20px 0;
+}
+
 .poster-col {
     height: 300px;
     img {
       border-radius: 40px;
       width: 250px;
+      // width: 200px;
     }
   }
+
+@media (max-width: 360px) {
+  .poster-col {
+    img {
+      width: 200px;
+    }
+  }
+}
 
 .rate {
   font-size: 14px;
   padding-top: 4px;
 }
 h5 {
-  margin-top: 4px;
+  margin-top: 0;
 }
 
 .swiper-slide-prev{
@@ -40,13 +53,13 @@ h5 {
 
   ion-content {
     font-family: 'Quicksand', sans-serif;
-    --background: #1C2039;
+    // --background: #1C2039;
 
     h5 {
-      color: white;
+      color: #1C2039;
     }
 
     p {
-      color: white;
+      color: #1C2039;
     }
   }

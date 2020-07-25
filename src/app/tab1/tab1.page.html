@@ -10,6 +10,10 @@
 
   <div class="ion-padding">
 
+    <div class="logotipo">
+      <img src="../../assets/logo.png" alt="">
+    </div>
+
     <ion-slides [options]="options">
 
       <ion-slide *ngFor="let char of Characters.results">
@@ -17,10 +21,8 @@
           <ion-row>
             <ion-col [routerLink]="['/characters', char.id]" size="12" class="poster-col">
               <img [src]="char.image" alt="">
-            </ion-col>
-            <ion-col size="12">
-              <h5 class="ion-no-margin">{{char.name}}e</h5>
-              <p lass="ion-no-margin rate">
+              <h5 class="ion-no-margin">{{char.name}}</h5>
+              <p class="ion-no-margin rate">
                 {{char.species}}
               </p>
             </ion-col>

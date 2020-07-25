@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { LocationService } from '../services/location.service';
+import { CharactersService } from '../services/characters.service';
+
 
 @Component({
   selector: 'app-tab3',
@@ -7,19 +8,19 @@ import { LocationService } from '../services/location.service';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
-  
-  Locations:any = [];
 
-  constructor(private locService: LocationService) {}
+  Characters:any = [];
+  
+  constructor(private charactserService: CharactersService) {}
 
   ngOnInit(): void {
-    this.getLocations();
   }
 
-  getLocations(){
-    this.locService.getLocations().subscribe(location => {
-      // console.log(location)
-      this.Locations = location;
+  onSearch(value:string) {
+    this.charactserService.searchCharacter(value).subscribe(character => {
+      console.log(character)
+
+      this.Characters = character;
     })
   }
 
